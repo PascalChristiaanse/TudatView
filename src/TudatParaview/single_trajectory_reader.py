@@ -223,7 +223,7 @@ def _add_dependent_variable_arrays(
             if size > 1:
                 arr.SetTuple(i, [float(segment[j]) for j in range(size)])
             else:
-                arr.SetValue(i, float(segment))
+                arr.SetValue(i, float(segment[0]))
 
         polydata.GetPointData().AddArray(arr)
 
